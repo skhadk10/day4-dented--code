@@ -1,0 +1,115 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    /* margin: 1rem; */
+}
+.wrapper{
+    display: grid;
+    gap:0.3 rem;
+
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "title title title"
+    "banner banner offer1"
+    "banner banner offer2"
+    "sidemenu main main"
+    "recent main main"
+    "tag main main"
+    "footer footer footer";
+}
+.wrapper > *{
+    padding: 1rem;
+    font-size: 24px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background: #000;
+    color:white;
+    grid-area: header;
+}
+
+.title{
+    background-color: aquamarine;
+    grid-area: title;
+}
+
+.main-banner{
+    background-color: red; 
+    grid-area: banner;
+}
+
+
+.offer1{
+    background-color:green;
+    grid-area: offer1;
+}
+.offer2{
+    background-color:blue;
+    grid-area: offer2;
+   
+}
+.side-menu{
+    background-color: yellow;
+    grid-area: sidemenu;
+}
+
+.tag{
+    background-color: pink;
+    grid-area: tag;
+}
+.recent{
+    background-color: orange;
+    grid-area: recent;
+}
+
+.main{
+    background-color: gray;
+    grid-area: main;
+}
+
+footer{
+    background-color: green;
+    grid-area: footer;
+}
+@media(max-width: 768px)
+ {
+    .wrapper{
+        display: grid;
+        gap:0.3 rem;
+    
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "title title"
+        "banner banner"
+        "offer1 offer1"
+        "offer2 offer2"
+        "sidemenu sidemenu"
+        "main main"
+        "recent recent"
+        "tag tag"
+        "footer footer";
+    }
+@media(max-width: 575px) {
+    .wrapper{
+        display: grid;
+        gap:0.3 rem;
+    
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header"
+        "title"
+        "banner"
+        "offer1"
+        "offer2"
+        "sidemenu"
+        "main"
+        "recent"
+        "tag"
+        "footer";
+    }
+}
